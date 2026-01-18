@@ -72,6 +72,11 @@ const routes = [
         path: 'demo',
         name: 'zakelijk-demo',
         component: () => import('@/views/zakelijk/Demo.vue')
+      },
+      {
+        path: 'wachtlijst',
+        name: 'zakelijk-waitlist',
+        component: () => import('@/views/zakelijk/Wachtlijst.vue')
       }
     ]
   },

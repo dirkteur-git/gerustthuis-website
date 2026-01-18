@@ -11,8 +11,12 @@ export function useProposition() {
   const isParticulier = computed(() => proposition.value === 'particulier')
   const isZakelijk = computed(() => proposition.value === 'zakelijk')
 
-  function setProposition(value) {
+  function setProposition(value, navigate = false) {
     proposition.value = value
+    if (navigate && router) {
+      const targetRoute = value === 'zakelijk' ? '/zakelijk' : '/particulier'
+      router.push(targetRoute)
+    }
   }
 
   function toggleProposition() {

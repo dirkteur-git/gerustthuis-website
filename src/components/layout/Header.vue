@@ -15,14 +15,14 @@ const isMenuOpen = ref(false)
 const particulierNavigation = [
   { name: 'Hoe het werkt', href: '/particulier/hoe-het-werkt' },
   { name: 'Producten', href: '/particulier/producten' },
-  { name: 'Prijzen', href: '/particulier/prijzen' },
+  { name: 'Wachtlijst', href: '/particulier/wachtlijst' },
   { name: 'Over ons', href: '/over-ons' },
   { name: 'Blog', href: '/blog' }
 ]
 
 const zakelijkNavigation = [
   { name: 'Oplossingen', href: '/zakelijk/oplossingen' },
-  { name: 'Prijzen', href: '/zakelijk/prijzen' },
+  { name: 'Wachtlijst', href: '/zakelijk/wachtlijst' },
   { name: 'Over ons', href: '/over-ons' },
   { name: 'Contact', href: '/contact' }
 ]
@@ -60,7 +60,7 @@ watch(() => route.path, (path) => {
       <div class="container">
         <div class="flex items-center justify-center gap-1 py-2">
           <button
-            @click="setProposition('particulier')"
+            @click="setProposition('particulier', true)"
             class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all"
             :class="isParticulier ? 'bg-primary text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'"
           >
@@ -68,7 +68,7 @@ watch(() => route.path, (path) => {
             Particulier
           </button>
           <button
-            @click="setProposition('zakelijk')"
+            @click="setProposition('zakelijk', true)"
             class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all"
             :class="isZakelijk ? 'bg-primary text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'"
           >
@@ -107,7 +107,7 @@ watch(() => route.path, (path) => {
 
         <!-- Desktop Actions -->
         <div class="hidden lg:flex items-center gap-4">
-          <a href="https://app.sensor.care/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
+          <a href="https://app.gerustthuis.nl/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
             Inloggen
           </a>
 
@@ -178,7 +178,7 @@ watch(() => route.path, (path) => {
           </RouterLink>
           <hr class="border-gray-200" />
           <a
-            href="https://app.sensor.care/login"
+            href="https://app.gerustthuis.nl/login"
             class="block py-2 text-gray-600 hover:text-primary font-medium transition-colors"
             @click="closeMenu"
           >
