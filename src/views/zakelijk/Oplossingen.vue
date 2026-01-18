@@ -10,12 +10,16 @@ import {
   Activity,
   DoorOpen,
   Thermometer,
-  Droplets,
-  BatteryLow,
+  Radar,
   ArrowRight
 } from 'lucide-vue-next'
 
 const problems = [
+  {
+    title: 'Valincidenten',
+    description: 'Bewoners die vallen worden niet altijd direct opgemerkt. Elke minuut telt.',
+    icon: AlertTriangle
+  },
   {
     title: 'Nachtelijke onrust',
     description: 'Bewoners die \'s nachts onrustig zijn of dwalen, worden niet altijd tijdig opgemerkt.',
@@ -25,41 +29,42 @@ const problems = [
     title: 'Werkdruk personeel',
     description: 'Regelmatige controleronden kosten veel tijd en verstoren de nachtrust van bewoners.',
     icon: Activity
-  },
-  {
-    title: 'Late signalering',
-    description: 'Valincidenten of medische noodgevallen worden soms pas laat ontdekt.',
-    icon: AlertTriangle
   }
 ]
 
 const solutions = [
   {
+    title: 'Valsensoren (Radar)',
+    description: 'Detecteren een val zonder camera via radar technologie. Direct melding bij het personeel.',
+    icon: Radar,
+    features: ['Valdetectie zonder camera', 'Direct alarm bij val', 'Geen wearable nodig']
+  },
+  {
     title: 'Bewegingssensoren',
-    description: 'Detecteren activiteit en inactiviteit zonder visuele monitoring. Leren automatisch het normale patroon.',
+    description: 'Detecteren activiteit en inactiviteit per kamer. Leren automatisch het normale patroon.',
     icon: Activity,
-    features: ['Aanwezigheidsdetectie', 'Patroonherkenning', 'Geen camera nodig']
+    features: ['Aanwezigheidsdetectie', 'Patroonherkenning', 'Per kamer inzicht']
   },
   {
     title: 'Deursensoren',
-    description: 'Monitoren deuropeningen voor dwaaldetectie en dagritme analyse.',
+    description: 'Monitoren kamerdeur openingen voor dwaaldetectie en dagritme analyse.',
     icon: DoorOpen,
     features: ['Kamerdeur monitoring', 'Koelkast/medicijnkast', 'Dwaalpreventie']
   },
   {
     title: 'Omgevingssensoren',
-    description: 'Meten temperatuur, luchtvochtigheid en waterlekkage voor een veilige leefomgeving.',
+    description: 'Meten temperatuur en luchtvochtigheid per kamer voor een veilige leefomgeving.',
     icon: Thermometer,
-    features: ['Temperatuurbewaking', 'Luchtvochtigheid', 'Waterlekkage detectie']
+    features: ['Temperatuurbewaking', 'Luchtvochtigheid', 'Kamer klimaat']
   }
 ]
 
 const alerts = [
-  { name: 'Geen beweging', description: 'Geen activiteit gedetecteerd in een bepaalde periode', severity: 'critical' },
+  { name: 'Val gedetecteerd', description: 'Radar detecteert een val - direct alarm', severity: 'critical' },
+  { name: 'Geen beweging', description: 'Geen activiteit in kamer gedurende periode', severity: 'critical' },
   { name: 'Nachtelijke onrust', description: 'Meerdere bewegingen tijdens nachtelijke uren', severity: 'warning' },
-  { name: 'Koelkast niet geopend', description: 'Indicatie van verminderde zelfredzaamheid', severity: 'warning' },
-  { name: 'Laat opstaan', description: 'Eerste activiteit later dan gebruikelijk', severity: 'info' },
-  { name: 'Batterij laag', description: 'Sensor batterij moet vervangen worden', severity: 'info' }
+  { name: 'Dwaalgedrag', description: 'Bewoner verlaat kamer op ongebruikelijk tijdstip', severity: 'warning' },
+  { name: 'Laat opstaan', description: 'Eerste activiteit later dan gebruikelijk', severity: 'info' }
 ]
 
 const severityColors = {
@@ -76,11 +81,11 @@ const severityColors = {
       <div class="container">
         <div class="max-w-3xl">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Oplossingen voor <span class="text-primary">zorginstellingen</span>
+            Kamer monitoring <span class="text-primary">oplossingen</span>
           </h1>
           <p class="text-xl text-gray-600 mb-8">
-            Ontdek hoe GerustThuis Pro de dagelijkse uitdagingen in uw zorginstelling aanpakt
-            met slimme, privacy-vriendelijke monitoring.
+            Sensor.Care biedt per kamer inzicht met valdetectie, bewegingsmonitoring en slimme alerts.
+            Privacy-vriendelijk en zonder camera's.
           </p>
         </div>
       </div>
@@ -98,8 +103,8 @@ const severityColors = {
     </Section>
 
     <!-- Our Solutions -->
-    <Section title="Onze sensoroplossingen" class="bg-gray-50">
-      <div class="grid lg:grid-cols-3 gap-8">
+    <Section title="Sensoren per kamer" class="bg-gray-50">
+      <div class="grid md:grid-cols-2 gap-8">
         <Card v-for="solution in solutions" :key="solution.title" class="p-6">
           <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
             <component :is="solution.icon" class="w-6 h-6 text-primary" />
@@ -143,8 +148,8 @@ const severityColors = {
         <div class="grid md:grid-cols-3 gap-8">
           <div class="text-center">
             <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-            <h3 class="font-semibold text-gray-900 mb-2">Sensoren plaatsen</h3>
-            <p class="text-gray-600 text-sm">Draadloze sensoren worden geplaatst in kamers en algemene ruimtes.</p>
+            <h3 class="font-semibold text-gray-900 mb-2">Sensoren per kamer</h3>
+            <p class="text-gray-600 text-sm">Valsensoren, bewegingssensoren en deursensoren worden per kamer geplaatst.</p>
           </div>
           <div class="text-center">
             <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
@@ -154,7 +159,7 @@ const severityColors = {
           <div class="text-center">
             <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
             <h3 class="font-semibold text-gray-900 mb-2">Alerts ontvangen</h3>
-            <p class="text-gray-600 text-sm">Bij afwijkingen ontvangt het personeel direct een melding.</p>
+            <p class="text-gray-600 text-sm">Bij valincidenten of afwijkingen ontvangt het personeel direct een melding.</p>
           </div>
         </div>
       </div>
@@ -163,13 +168,13 @@ const severityColors = {
     <!-- CTA -->
     <Section class="bg-primary text-white">
       <div class="text-center max-w-2xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4">Interesse in een demonstratie?</h2>
+        <h2 class="text-3xl font-bold mb-4">Interesse in een pilot?</h2>
         <p class="text-primary-100 mb-8">
-          Wij komen graag langs om de mogelijkheden voor uw situatie te bespreken.
+          Meld u aan voor de wachtlijst en wij nemen contact op om de mogelijkheden te bespreken.
         </p>
-        <RouterLink to="/zakelijk/demo">
+        <RouterLink to="/zakelijk/wachtlijst">
           <Button variant="secondary" size="lg">
-            Demo aanvragen
+            Aanmelden voor pilot
             <ArrowRight class="w-5 h-5 ml-2" />
           </Button>
         </RouterLink>

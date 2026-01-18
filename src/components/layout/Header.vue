@@ -73,7 +73,7 @@ watch(() => route.path, (path) => {
             :class="isZakelijk ? 'bg-primary text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'"
           >
             <Building2 class="w-4 h-4" />
-            Zakelijk
+            Zorginstellingen
           </button>
         </div>
       </div>
@@ -84,11 +84,11 @@ watch(() => route.path, (path) => {
         <!-- Logo -->
         <RouterLink :to="homeRoute" class="flex items-center gap-2" @click="closeMenu">
           <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">G</span>
+            <span class="text-white font-bold text-xl">{{ isZakelijk ? 'S' : 'G' }}</span>
           </div>
           <div>
-            <span class="font-bold text-xl text-gray-900">GerustThuis</span>
-            <span v-if="isZakelijk" class="text-xs text-primary font-semibold ml-1">Pro</span>
+            <span v-if="isZakelijk" class="font-bold text-xl text-gray-900">Sensor.Care</span>
+            <span v-else class="font-bold text-xl text-gray-900">GerustThuis</span>
           </div>
         </RouterLink>
 

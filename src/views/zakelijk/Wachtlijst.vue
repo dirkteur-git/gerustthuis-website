@@ -2,16 +2,16 @@
 import { ref } from 'vue'
 import {
   Lock,
-  Brain,
   Building2,
   BarChart3,
   Bell,
   Shield,
-  Users,
+  Radar,
   ChevronDown,
   ChevronUp,
   Clock,
-  Quote
+  DoorOpen,
+  AlertTriangle
 } from 'lucide-vue-next'
 import WaitlistForm from '@/components/forms/WaitlistForm.vue'
 
@@ -24,12 +24,12 @@ const toggleFaq = (index) => {
 
 const faqs = [
   {
-    question: 'Hoe werkt de integratie met ons zorgsysteem?',
-    answer: 'GerustThuis Pro biedt API-koppelingen met gangbare zorgsystemen. Meldingen kunnen direct in jullie ECD of planningstool terechtkomen. We bespreken dit graag in een demo.'
+    question: 'Hoe werkt de valdetectie?',
+    answer: 'Sensor.Care gebruikt radar-technologie om vallen te detecteren zonder camera. De sensor herkent een val en stuurt direct een melding naar het personeel. Geen wearable nodig.'
   },
   {
-    question: 'Wat kost GerustThuis Pro?',
-    answer: 'De prijs hangt af van het aantal kamers en gewenste functionaliteiten. Neem contact op voor een gesprek en offerte op maat.'
+    question: 'Hoe werkt de integratie met ons zorgsysteem?',
+    answer: 'Sensor.Care biedt API-koppelingen met gangbare zorgsystemen. Meldingen kunnen direct in jullie ECD of planningstool terechtkomen. We bespreken dit graag in een demo.'
   },
   {
     question: 'Hoe zit het met privacy en AVG?',
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: 'Kunnen we een pilot doen?',
-    answer: 'Ja, we starten graag met een pilot van 3-6 maanden in een beperkt aantal kamers. Zo kun je ervaren wat GerustThuis Pro oplevert.'
+    answer: 'Ja, we starten graag met een pilot van 3-6 maanden in een beperkt aantal kamers. Zo kun je ervaren wat Sensor.Care oplevert.'
   },
   {
     question: 'Wanneer is het beschikbaar?',
@@ -46,6 +46,11 @@ const faqs = [
 ]
 
 const features = [
+  {
+    icon: Radar,
+    title: 'Valdetectie',
+    description: 'Radar detecteert een val zonder camera. Direct alarm bij het personeel.'
+  },
   {
     icon: BarChart3,
     title: 'Dashboard per kamer',
@@ -57,14 +62,9 @@ const features = [
     description: 'Meldingen bij afwijkingen, niet bij elk bezoek'
   },
   {
-    icon: Users,
-    title: 'Meerdere locaties',
-    description: 'Beheer al je locaties vanuit één omgeving'
-  },
-  {
-    icon: Brain,
-    title: 'AI patroonherkenning',
-    description: 'Leert automatisch het normale ritme van elke bewoner'
+    icon: DoorOpen,
+    title: 'Kamer monitoring',
+    description: 'Per kamer inzicht in beweging, temperatuur en deuren'
   },
   {
     icon: Shield,
@@ -80,16 +80,16 @@ const features = [
 
 const benefits = [
   {
+    title: 'Direct alarm bij val',
+    description: 'Valdetectie via radar - geen camera, geen wearable nodig.'
+  },
+  {
     title: 'Minder nachtronden',
     description: 'Alleen rondlopen als het nodig is, op basis van echte signalen.'
   },
   {
     title: 'Sneller handelen',
     description: 'Direct een melding bij afwijkingen, niet pas bij de volgende ronde.'
-  },
-  {
-    title: 'Geruststelling familie',
-    description: 'Familie kan meekijken via hun eigen app - minder belletjes voor jullie.'
   },
   {
     title: 'Privacy bewoners',
@@ -105,20 +105,19 @@ const benefits = [
       <div class="container max-w-4xl mx-auto px-4 py-12 sm:py-20">
         <!-- Logo -->
         <div class="mb-8 sm:mb-12 flex items-center gap-2">
-          <span class="text-2xl font-bold text-primary">GerustThuis</span>
-          <span class="text-sm font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded">Pro</span>
+          <span class="text-2xl font-bold text-primary">Sensor.Care</span>
         </div>
 
         <!-- Main content -->
         <div class="text-center">
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Slimme monitoring voor
-            <span class="text-primary">zorginstellingen</span>
+            Kamer monitoring met
+            <span class="text-primary">valdetectie</span>
           </h1>
 
           <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Minder nachtronden. Sneller handelen bij afwijkingen.
-            Meer rust voor bewoners én medewerkers.
+            Per kamer inzicht. Valdetectie via radar. Slimme alerts.
+            Zonder camera's, met respect voor privacy.
           </p>
 
           <!-- Waitlist Form -->
@@ -139,6 +138,10 @@ const benefits = [
 
         <div class="space-y-6 max-w-xl mx-auto">
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
+            <AlertTriangle class="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" />
+            <p class="text-gray-700 text-lg">"Een bewoner viel 's nachts. We merkten het pas uren later."</p>
+          </div>
+          <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
             <span class="text-2xl">🚶</span>
             <p class="text-gray-700 text-lg">"Elke nacht 3 rondes lopen, ook als iedereen slaapt."</p>
           </div>
@@ -147,18 +150,14 @@ const benefits = [
             <p class="text-gray-700 text-lg">"Je weet pas dat er iets mis is als je het ziet."</p>
           </div>
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
-            <span class="text-2xl">📞</span>
-            <p class="text-gray-700 text-lg">"Familie belt: hoe gaat het met mijn vader?"</p>
-          </div>
-          <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
             <span class="text-2xl">⏰</span>
-            <p class="text-gray-700 text-lg">"Te weinig tijd, te veel administratie."</p>
+            <p class="text-gray-700 text-lg">"Te weinig tijd, te veel kamers."</p>
           </div>
         </div>
 
         <p class="text-center text-gray-600 mt-10 text-lg max-w-2xl mx-auto">
           Zorg draait om mensen, niet om rondes.
-          GerustThuis Pro geeft je de tools om <strong>slimmer</strong> te werken.
+          Sensor.Care geeft je de tools om <strong>slimmer</strong> te werken.
         </p>
       </div>
     </section>
@@ -167,7 +166,7 @@ const benefits = [
     <section class="py-16 sm:py-24 bg-white">
       <div class="container max-w-5xl mx-auto px-4">
         <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-16">
-          Wat GerustThuis Pro biedt
+          Wat Sensor.Care biedt
         </h2>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -279,7 +278,7 @@ const benefits = [
               <span class="text-secondary">✓</span> Persoonlijke demo
             </span>
             <span class="flex items-center gap-2">
-              <span class="text-secondary">✓</span> Maatwerk prijsvoorstel
+              <span class="text-secondary">✓</span> Maatwerk voorstel
             </span>
           </div>
         </div>
@@ -300,12 +299,12 @@ const benefits = [
       <div class="container max-w-5xl mx-auto px-4">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="text-sm">
-            © 2026 GerustThuis |
+            © 2026 Sensor.Care |
             <a href="/privacy" class="hover:text-white transition-colors">Privacy</a> |
             <a href="/contact" class="hover:text-white transition-colors">Contact</a>
           </div>
           <div class="text-sm">
-            gerustthuis.nl
+            sensor.care
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ const benefits = [
             Demo <span class="text-primary">aanvragen</span>
           </h1>
           <p class="text-xl text-gray-600">
-            Ontdek hoe GerustThuis Pro uw zorginstelling kan helpen.
+            Ontdek hoe Sensor.Care uw zorginstelling kan helpen met kamer monitoring en valdetectie.
             Vul het formulier in en we nemen binnen 1 werkdag contact met u op.
           </p>
         </div>
@@ -186,9 +186,9 @@ const benefits = [
                 <Phone class="w-5 h-5" />
                 +31 (0)85 123 4567
               </a>
-              <a href="mailto:zakelijk@gerustthuis.nl" class="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors">
+              <a href="mailto:info@sensor.care" class="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors">
                 <Mail class="w-5 h-5" />
-                zakelijk@gerustthuis.nl
+                info@sensor.care
               </a>
             </div>
           </Card>

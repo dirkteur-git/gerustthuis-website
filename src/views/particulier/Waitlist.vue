@@ -26,11 +26,11 @@ const toggleFaq = (index) => {
 const faqs = [
   {
     question: 'Zijn er camera\'s?',
-    answer: 'Nee, absoluut niet. GerustThuis werkt met bewegingssensoren en deurcontacten. Je ziet patronen, geen beelden. Privacy voorop.'
+    answer: 'Nee, absoluut niet. GerustThuis werkt met bewegingssensoren, deurcontacten en radar voor valdetectie. Je ziet patronen, geen beelden. Privacy voorop.'
   },
   {
     question: 'Wat kost het?',
-    answer: 'We werken aan eerlijke prijzen. Denk aan een eenmalige aanschaf van €200-400 voor sensoren, plus een klein maandelijks bedrag. Veiligheidsmeldingen worden gratis.'
+    answer: 'We werken nog aan het exacte prijsmodel. Meld je aan voor de wachtlijst en krijg als eerste toegang tot vroegboekprijzen.'
   },
   {
     question: 'Moet mijn ouder technisch zijn?',
