@@ -107,7 +107,7 @@ watch(() => route.path, (path) => {
 
         <!-- Desktop Actions -->
         <div class="hidden lg:flex items-center gap-4">
-          <a href="https://app.gerustthuis.nl/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
+          <a href="https://app.sensor.care/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
             Inloggen
           </a>
 
@@ -178,7 +178,7 @@ watch(() => route.path, (path) => {
           </RouterLink>
           <hr class="border-gray-200" />
           <a
-            href="https://app.gerustthuis.nl/login"
+            href="https://app.sensor.care/login"
             class="block py-2 text-gray-600 hover:text-primary font-medium transition-colors"
             @click="closeMenu"
           >
