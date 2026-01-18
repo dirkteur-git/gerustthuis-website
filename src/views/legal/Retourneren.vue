@@ -62,11 +62,3 @@ import { RouterLink } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
-.prose h2 { @apply text-2xl font-bold text-gray-900 mt-8 mb-4; }
-.prose p { @apply mb-4; }
-.prose ul, .prose ol { @apply mb-4 pl-6; }
-.prose ul { @apply list-disc; }
-.prose ol { @apply list-decimal; }
-.prose li { @apply mb-2; }
-</style>

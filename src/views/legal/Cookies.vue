@@ -62,9 +62,3 @@ import { RouterLink } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
-.prose h2 { @apply text-2xl font-bold text-gray-900 mt-8 mb-4; }
-.prose h3 { @apply text-xl font-semibold text-gray-900 mt-6 mb-2; }
-.prose p { @apply mb-4; }
-.prose .lead { @apply text-xl mb-6; }
-</style>

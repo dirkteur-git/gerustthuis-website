@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cart'
-import { useAuthStore } from '@/stores/auth'
 import Button from '@/components/ui/Button.vue'
 import Input from '@/components/ui/Input.vue'
 import Card from '@/components/ui/Card.vue'
@@ -12,7 +11,6 @@ import { Check, Package, Trash2 } from 'lucide-vue-next'
 
 const router = useRouter()
 const cartStore = useCartStore()
-const authStore = useAuthStore()
 
 const currentStep = ref(1)
 const loading = ref(false)

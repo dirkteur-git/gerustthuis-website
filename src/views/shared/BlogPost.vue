@@ -164,16 +164,3 @@ const formatDate = (dateStr) => {
   </div>
 </template>
 
-<style scoped>
-.prose h2 {
-  @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
-}
-
-.prose p {
-  @apply text-gray-600 mb-4;
-}
-
-.prose .lead {
-  @apply text-xl text-gray-700 mb-6;
-}
-</style>
