@@ -1,12 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { Menu, X, ShoppingCart } from 'lucide-vue-next'
-import { useCartStore } from '@/stores/cart'
+import { Menu, X } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
 
 const route = useRoute()
-const cartStore = useCartStore()
 const isMenuOpen = ref(false)
 
 const navigation = [
@@ -30,10 +28,6 @@ const closeMenu = () => {
 
 <template>
   <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-sm border-b border-gray-100">
-    <a href="#main-content" class="skip-link">
-      Ga naar hoofdinhoud
-    </a>
-
     <div class="container">
       <nav class="flex items-center justify-between h-16 md:h-20" aria-label="Hoofdnavigatie">
         <!-- Logo -->
@@ -64,17 +58,6 @@ const closeMenu = () => {
           <a href="https://app.gerustthuis.nl/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
             Inloggen
           </a>
-          <RouterLink to="/particulier/producten" class="relative">
-            <Button variant="outline" size="sm" class="relative">
-              <ShoppingCart class="w-5 h-5" />
-              <span
-                v-if="cartStore.itemCount > 0"
-                class="absolute -top-2 -right-2 w-5 h-5 bg-secondary text-gray-900 text-xs font-bold rounded-full flex items-center justify-center"
-              >
-                {{ cartStore.itemCount }}
-              </span>
-            </Button>
-          </RouterLink>
           <RouterLink to="/particulier/wachtlijst">
             <Button variant="primary">Eerste toegang</Button>
           </RouterLink>

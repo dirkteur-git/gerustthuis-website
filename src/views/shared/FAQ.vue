@@ -15,15 +15,65 @@ const categories = [
     items: [
       {
         title: 'Wat is GerustThuis?',
-        content: 'GerustThuis is een AI-gestuurde thuismonitor die mantelzorgers helpt om op afstand een oogje te houden op hun ouders of familieleden. Door middel van slimme sensoren (geen camera\'s!) monitoren we het dagritme en waarschuwen we bij afwijkingen.'
+        content: 'GerustThuis is een slim thuismonitoringsysteem speciaal voor mantelzorgers. Het leert het dagelijkse ritme in huis en waarschuwt alleen als er iets afwijkt — bijvoorbeeld bij een val of onverwachte stilte. Geen camera\'s, geen tracking, alleen geruststelling.'
       },
       {
         title: 'Voor wie is GerustThuis bedoeld?',
-        content: 'GerustThuis is bedoeld voor mantelzorgers die zorgen voor een ouder familielid dat zelfstandig woont. Het helpt je om rust in je hoofd te krijgen zonder constant te hoeven bellen of langsgaan.'
+        content: 'GerustThuis is voor mantelzorgers: kinderen die zorgen voor hun ouders op afstand, of partners die niet meer met een gerust gevoel de deur uit durven. Het is voor iedereen die wil weten dat het goed gaat — zonder constant te moeten bellen.'
       },
       {
         title: 'Werkt het in elke woning?',
-        content: 'Ja, GerustThuis werkt in elk type woning: van appartement tot vrijstaand huis. Je hebt alleen een wifi-verbinding en een stopcontact nodig voor de hub.'
+        content: 'Ja, GerustThuis werkt in elk type woning: van appartement tot vrijstaand huis. Je hebt alleen een wifi-verbinding nodig. De sensoren werken op batterijen en kunnen overal geplaatst worden.'
+      },
+      {
+        title: 'Is mijn ouder niet te oud voor technologie?',
+        content: 'GerustThuis vraagt niets van je ouder. Geen knoppen, geen apps, geen interactie. De sensoren werken volledig automatisch op de achtergrond. Je ouder merkt er niets van en hoeft niets te doen.'
+      },
+      {
+        title: 'Wat maakt GerustThuis anders dan een alarm of camera?',
+        content: 'Een alarm moet je activeren, een camera filmt alles. GerustThuis werkt automatisch én respecteert privacy. Het systeem leert het ritme en meldt alleen afwijkingen — geen constante surveillance, geen knoppen om te vergeten.'
+      },
+      {
+        title: 'Moet mijn ouder ermee instemmen?',
+        content: 'Ja, en dat is belangrijk. GerustThuis is geen heimelijk systeem. We raden aan om samen met je ouder te bespreken wat het doet en waarom. De meeste ouderen vinden het prettig: ze behouden hun vrijheid en jij hebt rust.'
+      }
+    ]
+  },
+  {
+    id: 'installatie',
+    title: 'Installatie',
+    items: [
+      {
+        title: 'Kan ik het zelf installeren?',
+        content: 'Ja, absoluut! De installatie is heel eenvoudig en doe je zelf in 15-30 minuten. De hub sluit je aan op wifi en stroom (net als een router). De sensoren werken draadloos op batterijen — je plakt ze gewoon op met de meegeleverde stickers. Geen technische kennis nodig.'
+      },
+      {
+        title: 'Kunnen jullie het ook voor mij installeren?',
+        content: 'Ja, dat kan! We bieden ook een installatieservice aan. Dan komen we bij je ouder langs, installeren alles, en leggen uit hoe het werkt. Handig als je zelf niet in de buurt woont of liever zekerheid hebt dat alles goed staat.'
+      },
+      {
+        title: 'Wat krijg ik precies geleverd?',
+        content: 'Je ontvangt één hub (het centrale apparaat dat op wifi en stroom wordt aangesloten) en een aantal draadloze sensoren. De hub heeft alleen een stopcontact en wifi nodig. De sensoren werken volledig op batterijen — geen kabels, geen boren, geen gedoe.'
+      },
+      {
+        title: 'Hoe lang gaan de batterijen mee?',
+        content: 'De sensoren werken op batterijen die ongeveer 2 jaar meegaan. Je krijgt automatisch een melding wanneer een batterij bijna leeg is, zodat je ruim de tijd hebt om te vervangen. Batterijen vervangen is simpel en doe je zelf.'
+      },
+      {
+        title: 'Heb ik speciale technische kennis nodig?',
+        content: 'Nee, helemaal niet. Als je een wifi-wachtwoord kunt invoeren, kun je GerustThuis installeren. De app leidt je stap voor stap door het proces. En mocht je vastlopen: onze support helpt je graag verder — of we komen langs.'
+      },
+      {
+        title: 'Waar plaats ik de sensoren het beste?',
+        content: 'De sensoren plaats je in de ruimtes waar je ouder het meeste komt: woonkamer, keuken, slaapkamer, badkamer en eventueel de hal. Bij de installatie geven we tips over de optimale plekken. De sensoren zijn klein en vallen nauwelijks op.'
+      },
+      {
+        title: 'Moet ik boren of kabels trekken?',
+        content: 'Nee! De hub heeft alleen een stopcontact nodig. De sensoren plak je op met dubbelzijdige stickers — geen boren, geen schroeven, geen kabels. Je kunt ze ook makkelijk verplaatsen als dat nodig is.'
+      },
+      {
+        title: 'Wat als mijn ouder geen wifi heeft?',
+        content: 'GerustThuis heeft wifi nodig om meldingen te kunnen versturen. De meeste ouderen hebben wifi via hun internetprovider. Heb je hulp nodig bij het instellen? We denken graag mee over een oplossing.'
       }
     ]
   },
@@ -33,11 +83,11 @@ const categories = [
     items: [
       {
         title: 'Worden er camera\'s gebruikt?',
-        content: 'Nee, absoluut niet. We gebruiken alleen bewegingssensoren, deurcontacten en radar-technologie. Je ouder wordt nooit gefilmd of opgenomen.'
+        content: 'Nee, absoluut niet. We gebruiken alleen bewegingssensoren en deurcontacten. Je ouder wordt nooit gefilmd of opgenomen. Privacy is een kernwaarde van GerustThuis.'
       },
       {
         title: 'Kan ik als mantelzorger zien wat mijn ouder doet?',
-        content: 'Nee, en dat is bewust zo. Je kunt alleen zien dat het systeem actief is en dat er geen afwijkingen zijn. Bij afwijkingen krijg je een melding, maar je ziet nooit de sensordata of bewegingspatronen. De privacy van je ouder staat voorop.'
+        content: 'Nee, en dat is bewust zo. Je kunt alleen zien of alles normaal verloopt of dat er een afwijking is. Je ziet nooit waar je ouder precies is of wat die doet. We melden alleen afwijkingen, geen locaties of activiteiten.'
       },
       {
         title: 'Waar wordt de data opgeslagen?',
@@ -45,61 +95,71 @@ const categories = [
       },
       {
         title: 'Wie kan de data zien?',
-        content: 'Niemand behalve de oudere zelf, als die lokaal via wifi in de woning het systeem bekijkt. Mantelzorgers en wij als bedrijf kunnen de sensordata niet zien - die verlaat de woning niet.'
+        content: 'Niemand. De sensordata verlaat de woning niet. Wij als bedrijf kunnen de data niet zien. Alleen het systeem zelf analyseert lokaal of het dagritme normaal verloopt.'
+      },
+      {
+        title: 'Voelt mijn ouder zich niet bekeken?',
+        content: 'Dat is juist het mooie aan GerustThuis. Door de privacy-first aanpak voelt het niet als surveillance. Je ouder behoudt volledige autonomie en privacy, terwijl jij als mantelzorger gerust bent dat je gebeld wordt als er iets mis is.'
       }
     ]
   },
   {
-    id: 'producten',
-    title: 'Producten & Installatie',
+    id: 'werking',
+    title: 'Hoe werkt het?',
     items: [
       {
-        title: 'Welk pakket past bij mij?',
-        content: 'Het Basis pakket is geschikt voor een kleine woning met 2-3 kamers. Het Compleet pakket is onze meest gekozen optie voor een gemiddelde woning. Premium is ideaal voor grotere woningen of als je extra zekerheid wilt met installatie aan huis.'
+        title: 'Hoe weet het systeem wat normaal is?',
+        content: 'GerustThuis leert de eerste weken het normale ritme in huis: wanneer staat je ouder op, wanneer gaat het licht aan, wanneer is er activiteit in de keuken. Na deze leerperiode herkent het systeem afwijkingen en waarschuwt alleen wanneer nodig.'
       },
       {
-        title: 'Kan ik zelf installeren?',
-        content: 'Ja, alle pakketten kunnen zelf geïnstalleerd worden. Je ontvangt een duidelijke handleiding en onze support is altijd bereikbaar als je hulp nodig hebt. Gemiddeld duurt de installatie 30-45 minuten.'
+        title: 'Wat voor meldingen krijg ik?',
+        content: 'Je krijgt alleen meldingen bij afwijkingen: bijvoorbeeld als er \'s ochtends geen activiteit is terwijl dat normaal wel zo is, of als er een plotselinge val wordt gedetecteerd. Geen dagelijkse updates, alleen wanneer het ertoe doet.'
       },
       {
-        title: 'Hoe lang duurt de installatie door jullie?',
-        content: 'Bij installatie aan huis (beschikbaar bij Premium of als add-on) komt onze specialist langs. De installatie duurt gemiddeld 1-1,5 uur, inclusief uitleg.'
-      }
-    ]
-  },
-  {
-    id: 'abonnement',
-    title: 'Abonnement & Prijzen',
-    items: [
-      {
-        title: 'Kan ik maandelijks opzeggen?',
-        content: 'Ja, je kunt je abonnement maandelijks opzeggen. Er is geen minimum looptijd. Na opzegging blijven de sensoren van jou, maar de monitoring en alerts stoppen.'
+        title: 'Hoe ontvang ik meldingen?',
+        content: 'Je kiest zelf hoe je meldingen wilt ontvangen: via de app, sms, WhatsApp of telefonisch. Je kunt ook meerdere contactpersonen opgeven die meldingen ontvangen.'
       },
-      {
-        title: 'Zijn er extra kosten?',
-        content: 'Nee, de genoemde prijzen zijn compleet. De eenmalige prijs is voor de hardware, de maandelijkse prijs is voor de monitoring, alerts en support. Er zijn geen verborgen kosten.'
-      },
-      {
-        title: 'Hoe werkt de garantie?',
-        content: 'Je krijgt 30 dagen niet-goed-geld-terug garantie. Daarnaast hebben alle producten 2 jaar fabrieksgarantie. Bij problemen vervangen we de sensor gratis.'
-      }
-    ]
-  },
-  {
-    id: 'technisch',
-    title: 'Technisch',
-    items: [
       {
         title: 'Wat als internet uitvalt?',
-        content: 'De hub blijft lokaal data verzamelen en analyseren. Afwijkingen worden lokaal gedetecteerd. Zodra internet weer werkt, wordt de status gesynchroniseerd (geen sensordata, alleen status). Bij langere uitval ontvang je een melding.'
+        content: 'De hub blijft lokaal analyseren, ook zonder internet. Afwijkingen worden gewoon gedetecteerd. Zodra internet weer werkt, worden meldingen alsnog verstuurd. Bij langere uitval krijg je een notificatie.'
       },
       {
-        title: 'Hoe lang gaan de batterijen mee?',
-        content: 'De batterijen van de sensoren gaan gemiddeld 1-2 jaar mee, afhankelijk van het gebruik. Je krijgt automatisch een melding wanneer een batterij bijna leeg is.'
+        title: 'Kan het systeem een val detecteren?',
+        content: 'Ja, de sensoren kunnen plotselinge valincidenten herkennen. Dit gebeurt door patroonherkenning — niet door je ouder te volgen, maar door afwijkingen in het normale bewegingspatroon te detecteren.'
       },
       {
-        title: 'Werkt het met mijn smart home?',
-        content: 'GerustThuis werkt standalone en heeft geen andere smart home systemen nodig. Integratie met andere systemen is momenteel niet beschikbaar.'
+        title: 'Hoe lang duurt de leerperiode?',
+        content: 'Het systeem leert de eerste 1-2 weken het normale dagritme. In die periode kunnen er wat valse meldingen zijn terwijl het systeem leert wat normaal is. Daarna worden de meldingen steeds nauwkeuriger.'
+      },
+      {
+        title: 'Wat als mijn ouder op vakantie gaat?',
+        content: 'Je kunt het systeem tijdelijk pauzeren via de app. Zo krijg je geen onnodige meldingen terwijl je ouder weg is. Zodra je het weer activeert, pakt het systeem het dagritme weer op.'
+      },
+      {
+        title: 'Kunnen meerdere mensen meldingen ontvangen?',
+        content: 'Ja! Je kunt meerdere contactpersonen opgeven die meldingen ontvangen. Handig als je de zorg deelt met broers, zussen of andere familieleden. Iedereen krijgt dan dezelfde meldingen.'
+      }
+    ]
+  },
+  {
+    id: 'kosten',
+    title: 'Kosten & Beschikbaarheid',
+    items: [
+      {
+        title: 'Wat kost GerustThuis?',
+        content: 'GerustThuis is momenteel nog in ontwikkeling. Door je aan te melden voor de wachtlijst, krijg je als eerste toegang wanneer we lanceren — vaak met een vroegboekkorting.'
+      },
+      {
+        title: 'Zijn er maandelijkse kosten?',
+        content: 'We werken aan een eerlijk prijsmodel met een eenmalige aanschaf van de hardware en een klein maandelijks bedrag voor de monitoring en support. Details volgen bij de lancering.'
+      },
+      {
+        title: 'Wanneer is GerustThuis beschikbaar?',
+        content: 'We werken hard aan de lancering. Door je aan te melden voor de wachtlijst blijf je op de hoogte en krijg je als eerste toegang.'
+      },
+      {
+        title: 'Kan ik het eerst uitproberen?',
+        content: 'We plannen een proefperiode zodat je GerustThuis zonder risico kunt uitproberen. Details hierover delen we met mensen op de wachtlijst.'
       }
     ]
   }
