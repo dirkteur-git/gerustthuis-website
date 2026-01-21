@@ -1,33 +1,21 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { Menu, X, ShoppingCart, Building2, User } from 'lucide-vue-next'
+import { Menu, X, ShoppingCart } from 'lucide-vue-next'
 import { useCartStore } from '@/stores/cart'
-import { useProposition } from '@/composables/useProposition'
 import Button from '@/components/ui/Button.vue'
 
 const route = useRoute()
 const cartStore = useCartStore()
-const { proposition, isParticulier, isZakelijk, setProposition, homeRoute } = useProposition()
 const isMenuOpen = ref(false)
 
-// Navigation items based on proposition
-const particulierNavigation = [
+const navigation = [
+  { name: 'Voor wie?', href: '/particulier/voor-wie' },
   { name: 'Hoe het werkt', href: '/particulier/hoe-het-werkt' },
-  { name: 'Producten', href: '/particulier/producten' },
-  { name: 'Wachtlijst', href: '/particulier/wachtlijst' },
-  { name: 'Over ons', href: '/over-ons' },
-  { name: 'Blog', href: '/blog' }
+  { name: 'Eerste toegang', href: '/particulier/wachtlijst' },
+  { name: 'Waarom we dit doen', href: '/over-ons' },
+  { name: 'Voor mantelzorgers', href: '/blog' }
 ]
-
-const zakelijkNavigation = [
-  { name: 'Oplossingen', href: '/zakelijk/oplossingen' },
-  { name: 'Wachtlijst', href: '/zakelijk/wachtlijst' },
-  { name: 'Over ons', href: '/over-ons' },
-  { name: 'Contact', href: '/contact' }
-]
-
-const navigation = computed(() => isZakelijk.value ? zakelijkNavigation : particulierNavigation)
 
 const isActive = (href) => route.path === href || route.path.startsWith(href + '/')
 
@@ -38,15 +26,6 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
 }
-
-// Update proposition based on route
-watch(() => route.path, (path) => {
-  if (path.startsWith('/zakelijk')) {
-    setProposition('zakelijk')
-  } else if (path.startsWith('/particulier')) {
-    setProposition('particulier')
-  }
-}, { immediate: true })
 </script>
 
 <template>
@@ -55,40 +34,15 @@ watch(() => route.path, (path) => {
       Ga naar hoofdinhoud
     </a>
 
-    <!-- Proposition Toggle Bar -->
-    <div class="bg-gray-50 border-b border-gray-100">
-      <div class="container">
-        <div class="flex items-center justify-center gap-1 py-2">
-          <button
-            @click="setProposition('particulier', true)"
-            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all"
-            :class="isParticulier ? 'bg-primary text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'"
-          >
-            <User class="w-4 h-4" />
-            Particulier
-          </button>
-          <button
-            @click="setProposition('zakelijk', true)"
-            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all"
-            :class="isZakelijk ? 'bg-primary text-white' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'"
-          >
-            <Building2 class="w-4 h-4" />
-            Zorginstellingen
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
       <nav class="flex items-center justify-between h-16 md:h-20" aria-label="Hoofdnavigatie">
         <!-- Logo -->
-        <RouterLink :to="homeRoute" class="flex items-center gap-2" @click="closeMenu">
+        <RouterLink to="/particulier" class="flex items-center gap-2" @click="closeMenu">
           <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">{{ isZakelijk ? 'S' : 'G' }}</span>
+            <span class="text-white font-bold text-xl">G</span>
           </div>
           <div>
-            <span v-if="isZakelijk" class="font-bold text-xl text-gray-900">Sensor.Care</span>
-            <span v-else class="font-bold text-xl text-gray-900">GerustThuis</span>
+            <span class="font-bold text-xl text-gray-900">GerustThuis</span>
           </div>
         </RouterLink>
 
@@ -110,31 +64,20 @@ watch(() => route.path, (path) => {
           <a href="https://app.gerustthuis.nl/login" class="text-gray-600 hover:text-primary font-medium transition-colors">
             Inloggen
           </a>
-
-          <!-- Particulier: Cart + Order button -->
-          <template v-if="isParticulier">
-            <RouterLink to="/particulier/producten" class="relative">
-              <Button variant="outline" size="sm" class="relative">
-                <ShoppingCart class="w-5 h-5" />
-                <span
-                  v-if="cartStore.itemCount > 0"
-                  class="absolute -top-2 -right-2 w-5 h-5 bg-secondary text-gray-900 text-xs font-bold rounded-full flex items-center justify-center"
-                >
-                  {{ cartStore.itemCount }}
-                </span>
-              </Button>
-            </RouterLink>
-            <RouterLink to="/particulier/producten">
-              <Button variant="primary">Bestel nu</Button>
-            </RouterLink>
-          </template>
-
-          <!-- Zakelijk: Demo button -->
-          <template v-else>
-            <RouterLink to="/zakelijk/demo">
-              <Button variant="primary">Demo aanvragen</Button>
-            </RouterLink>
-          </template>
+          <RouterLink to="/particulier/producten" class="relative">
+            <Button variant="outline" size="sm" class="relative">
+              <ShoppingCart class="w-5 h-5" />
+              <span
+                v-if="cartStore.itemCount > 0"
+                class="absolute -top-2 -right-2 w-5 h-5 bg-secondary text-gray-900 text-xs font-bold rounded-full flex items-center justify-center"
+              >
+                {{ cartStore.itemCount }}
+              </span>
+            </Button>
+          </RouterLink>
+          <RouterLink to="/particulier/wachtlijst">
+            <Button variant="primary">Eerste toegang</Button>
+          </RouterLink>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -184,17 +127,9 @@ watch(() => route.path, (path) => {
           >
             Inloggen
           </a>
-
-          <template v-if="isParticulier">
-            <RouterLink to="/particulier/producten" @click="closeMenu">
-              <Button variant="primary" full-width>Bestel nu</Button>
-            </RouterLink>
-          </template>
-          <template v-else>
-            <RouterLink to="/zakelijk/demo" @click="closeMenu">
-              <Button variant="primary" full-width>Demo aanvragen</Button>
-            </RouterLink>
-          </template>
+          <RouterLink to="/particulier/wachtlijst" @click="closeMenu">
+            <Button variant="primary" full-width>Eerste toegang</Button>
+          </RouterLink>
         </div>
       </div>
     </Transition>

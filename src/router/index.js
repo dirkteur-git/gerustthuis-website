@@ -4,10 +4,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '@/views/layouts/DefaultLayout.vue'
 
 const routes = [
-  // Landing - redirects based on stored preference
+  // Landing - redirect to particulier home
   {
     path: '/',
-    component: () => import('@/views/Landing.vue')
+    redirect: '/particulier'
   },
 
   // Particulier routes
@@ -19,6 +19,11 @@ const routes = [
         path: '',
         name: 'particulier-home',
         component: () => import('@/views/particulier/Home.vue')
+      },
+      {
+        path: 'voor-wie',
+        name: 'particulier-for-who',
+        component: () => import('@/views/particulier/VoorWie.vue')
       },
       {
         path: 'hoe-het-werkt',
@@ -44,39 +49,6 @@ const routes = [
         path: 'wachtlijst',
         name: 'particulier-waitlist',
         component: () => import('@/views/particulier/Waitlist.vue')
-      }
-    ]
-  },
-
-  // Zakelijk routes
-  {
-    path: '/zakelijk',
-    component: DefaultLayout,
-    children: [
-      {
-        path: '',
-        name: 'zakelijk-home',
-        component: () => import('@/views/zakelijk/Home.vue')
-      },
-      {
-        path: 'oplossingen',
-        name: 'zakelijk-solutions',
-        component: () => import('@/views/zakelijk/Oplossingen.vue')
-      },
-      {
-        path: 'prijzen',
-        name: 'zakelijk-pricing',
-        component: () => import('@/views/zakelijk/Prijzen.vue')
-      },
-      {
-        path: 'demo',
-        name: 'zakelijk-demo',
-        component: () => import('@/views/zakelijk/Demo.vue')
-      },
-      {
-        path: 'wachtlijst',
-        name: 'zakelijk-waitlist',
-        component: () => import('@/views/zakelijk/Wachtlijst.vue')
       }
     ]
   },

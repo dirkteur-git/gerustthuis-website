@@ -12,7 +12,12 @@ import {
   ChevronDown,
   ChevronUp,
   Package,
-  Quote
+  Quote,
+  Phone,
+  VolumeX,
+  HelpCircle,
+  HeartHandshake,
+  Flag
 } from 'lucide-vue-next'
 import WaitlistForm from '@/components/forms/WaitlistForm.vue'
 
@@ -132,19 +137,27 @@ const testimonials = [
 
         <div class="space-y-6 max-w-xl mx-auto">
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
-            <span class="text-2xl">😔</span>
+            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Phone class="w-5 h-5 text-primary" />
+            </div>
             <p class="text-gray-700 text-lg">"Je belt elke dag. Maar de ongerustheid blijft."</p>
           </div>
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
-            <span class="text-2xl">😰</span>
+            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <VolumeX class="w-5 h-5 text-primary" />
+            </div>
             <p class="text-gray-700 text-lg">"Je schrikt van elk gemist telefoontje."</p>
           </div>
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
-            <span class="text-2xl">💭</span>
+            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <HelpCircle class="w-5 h-5 text-primary" />
+            </div>
             <p class="text-gray-700 text-lg">"Je vraagt je af of je vaker langs moet gaan."</p>
           </div>
           <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
-            <span class="text-2xl">😓</span>
+            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <HeartHandshake class="w-5 h-5 text-primary" />
+            </div>
             <p class="text-gray-700 text-lg">"Je wilt helpen, maar ook je eigen leven leiden."</p>
           </div>
         </div>
@@ -323,8 +336,8 @@ const testimonials = [
           </div>
 
           <div class="mt-6 flex items-center gap-2 text-gray-600">
-            <span>🇳🇱</span>
-            <span>Een Nederlands initiatief</span>
+            <Flag class="w-4 h-4 text-primary" />
+            <span>100% Nederlands initiatief</span>
           </div>
         </div>
       </div>
