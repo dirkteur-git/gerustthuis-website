@@ -53,6 +53,34 @@ const routes = [
     ]
   },
 
+  // Zakelijk routes
+  {
+    path: '/zakelijk',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        name: 'zakelijk-home',
+        component: () => import('@/views/zakelijk/Home.vue')
+      },
+      {
+        path: 'oplossingen',
+        name: 'zakelijk-solutions',
+        component: () => import('@/views/zakelijk/Oplossingen.vue')
+      },
+      {
+        path: 'voor-wie',
+        name: 'zakelijk-for-who',
+        component: () => import('@/views/zakelijk/VoorWie.vue')
+      },
+      {
+        path: 'demo',
+        name: 'zakelijk-demo',
+        component: () => import('@/views/zakelijk/Demo.vue')
+      }
+    ]
+  },
+
   // Shared routes
   {
     path: '/over-ons',

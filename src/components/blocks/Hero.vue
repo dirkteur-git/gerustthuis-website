@@ -29,9 +29,15 @@ const trustBadges = [
           </h1>
 
           <!-- Subheadline -->
-          <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-            GerustThuis leert het dagelijkse ritme in huis en waarschuwt alleen als er iets afwijkt — bijvoorbeeld bij een val of onverwachte stilte.
+          <p class="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed">
+            Een slim apparaat met sensoren dat het dagritme leert en alleen meldt bij afwijkingen — zoals een val of onverwachte stilte.
           </p>
+
+          <!-- Smart device callout -->
+          <div class="inline-flex items-center gap-2 bg-primary/5 border border-primary/20 rounded-full px-4 py-2 mb-8">
+            <Activity class="w-4 h-4 text-primary" />
+            <span class="text-sm text-gray-700">Slimme sensoren leren patronen, geen camera's of wearables</span>
+          </div>
 
           <!-- Trust badges -->
           <div class="flex flex-wrap gap-4 mb-8">

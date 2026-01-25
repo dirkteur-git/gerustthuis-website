@@ -19,22 +19,36 @@ const locations = [
         <!-- Content -->
         <div>
           <span class="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm mb-4">
-            Hoeveel sensoren?
+            Smart home sensoren
           </span>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Minder dan je verwacht
+            Draadloze sensoren, slim systeem
           </h2>
-          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-            In veel woningen is een logisch patroon zichtbaar met ongeveer <strong class="text-gray-900">4 sensoren</strong>, geplaatst op strategische plekken.
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+            Je plaatst <strong class="text-gray-900">compacte bewegingssensoren</strong> in de belangrijkste ruimtes. Ze werken op batterij (2 jaar mee) en communiceren draadloos met de hub.
           </p>
 
-          <div class="space-y-4">
+          <div class="bg-gray-50 rounded-2xl p-5 mb-6">
+            <p class="text-gray-700 font-medium mb-2">Wat krijg je?</p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span><strong>1 hub</strong> — sluit aan op wifi en stroom, analyseert alle data lokaal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span><strong>4+ sensoren</strong> — draadloos, op batterij, plak je op met stickers</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3">
             <div class="flex items-center gap-3 text-gray-600">
               <Sparkles class="w-5 h-5 text-primary" />
-              <span>Zelfs in een klein appartement ontstaat zo al snel een betrouwbaar ritme.</span>
+              <span>In de meeste woningen volstaan 4 sensoren om een betrouwbaar ritme te herkennen.</span>
             </div>
             <p class="text-gray-500 text-sm pl-8">
-              (Uit te breiden indien nodig, maar klein starten werkt vaak het best.)
+              Uit te breiden indien nodig — maar klein starten werkt vaak het best.
             </p>
           </div>
         </div>

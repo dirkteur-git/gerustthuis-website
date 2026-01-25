@@ -4,18 +4,18 @@ import { Activity, EyeOff, Bell, ArrowRight } from 'lucide-vue-next'
 const features = [
   {
     icon: Activity,
-    title: 'Eigen ritme',
-    text: 'Iedere woning heeft een eigen ritme'
+    title: 'Sensoren leren',
+    text: 'De sensoren registreren beweging en herkennen het dagritme'
   },
   {
     icon: EyeOff,
-    title: 'Geen controle',
-    text: 'Niet meekijken, niet alles vastleggen'
+    title: 'Lokale analyse',
+    text: 'De hub analyseert alles lokaal — geen data naar de cloud'
   },
   {
     icon: Bell,
-    title: 'Slim ingrijpen',
-    text: 'Alleen ingrijpen als het nodig is'
+    title: 'Slimme meldingen',
+    text: 'Alleen een melding bij afwijkingen, niet bij elke beweging'
   }
 ]
 </script>
@@ -29,13 +29,13 @@ const features = [
     <div class="container relative">
       <div class="max-w-3xl mx-auto text-center mb-16">
         <span class="inline-block px-4 py-2 bg-green-100 text-green-700 font-semibold rounded-full text-sm mb-4">
-          De oplossing
+          Slim thuisapparaat
         </span>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          GerustThuis begrijpt wat normaal is
+          Sensoren + slimme hub = inzicht
         </h2>
         <p class="text-xl text-gray-600">
-          GerustThuis leert dat ritme en let op afwijkingen.
+          De sensoren registreren beweging. De hub leert het patroon en detecteert afwijkingen — automatisch, lokaal, privacy-first.
         </p>
       </div>
 

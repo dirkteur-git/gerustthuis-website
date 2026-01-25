@@ -31,13 +31,16 @@ const examples = [
     <div class="container">
       <div class="max-w-3xl mx-auto text-center mb-16">
         <span class="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm mb-4">
-          Wat is "normaal"?
+          Slimme patroonherkenning
         </span>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Zo herkent het systeem afwijkingen
+          Sensoren die het dagritme leren
         </h2>
-        <p class="text-xl text-gray-600">
-          Het systeem leert eerst het persoonlijke patroon van dit huishouden.
+        <p class="text-xl text-gray-600 mb-4">
+          De sensoren registreren beweging en activiteit. Het slimme systeem leert wat normaal is voor dit huishouden — en meldt alleen wanneer het patroon afwijkt.
+        </p>
+        <p class="text-gray-500">
+          Geen constante updates, geen tracking. Alleen een melding wanneer het ertoe doet.
         </p>
       </div>
 
