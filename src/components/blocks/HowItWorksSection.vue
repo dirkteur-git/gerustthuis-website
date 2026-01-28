@@ -11,8 +11,8 @@ const steps = [
   {
     number: '2',
     icon: Cpu,
-    title: 'Lokaal leren',
-    description: 'Het systeem leert in de woning zelf. Data verlaat het huis niet.'
+    title: 'Slim leren',
+    description: 'Het systeem leert het dagritme en herkent afwijkingen. Slim en veilig.'
   },
   {
     number: '3',

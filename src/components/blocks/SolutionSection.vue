@@ -1,21 +1,21 @@
 <script setup>
-import { Activity, EyeOff, Bell, ArrowRight } from 'lucide-vue-next'
+import { BarChart3, Lock, Bell, ArrowRight } from 'lucide-vue-next'
 
 const features = [
   {
-    icon: Activity,
-    title: 'Sensoren leren',
-    text: 'De sensoren registreren beweging en herkennen het dagritme'
+    icon: BarChart3,
+    title: 'Sensoren meten',
+    text: 'Bewegingssensoren registreren activiteit per ruimte, 24/7'
   },
   {
-    icon: EyeOff,
-    title: 'Lokale analyse',
-    text: 'De hub analyseert alles lokaal — geen data naar de cloud'
+    icon: Lock,
+    title: 'Algoritme leert',
+    text: 'Het systeem herkent het dagritme en weet wat normaal is voor deze bewoner'
   },
   {
     icon: Bell,
-    title: 'Slimme meldingen',
-    text: 'Alleen een melding bij afwijkingen, niet bij elke beweging'
+    title: 'Melding bij afwijking',
+    text: 'Alleen een signaal wanneer het patroon doorbroken wordt — niet bij elke beweging'
   }
 ]
 </script>
@@ -32,10 +32,10 @@ const features = [
           Slim thuisapparaat
         </span>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Sensoren + slimme hub = inzicht
+          Meten + Algoritme = Gerust Zijn
         </h2>
         <p class="text-xl text-gray-600">
-          De sensoren registreren beweging. De hub leert het patroon en detecteert afwijkingen — automatisch, lokaal, privacy-first.
+          Bewegingssensoren registreren activiteit. Het algoritme leert wat normaal is — en meldt alleen wanneer het patroon afwijkt. Geen camera's, geen inkijk.
         </p>
       </div>
 

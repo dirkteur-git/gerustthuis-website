@@ -102,7 +102,7 @@ const trustBadges = [
               <div class="mt-4 p-3 bg-gray-50 rounded-xl border border-dashed border-gray-200">
                 <p class="text-xs text-gray-500 text-center">
                   <Brain class="w-4 h-4 inline mr-1" />
-                  Sensoren meten beweging, niet locatie — alleen afwijkingen worden gemeld
+                  Slim en veilig — alleen meldingen bij afwijkingen, geen sensorbeelden
                 </p>
               </div>
             </div>

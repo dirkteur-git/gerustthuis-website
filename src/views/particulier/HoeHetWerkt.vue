@@ -183,15 +183,15 @@ const faqs = [
           <div class="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                Het systeem leert in de woning zelf. Data verlaat het huis niet. Na ongeveer een week is het persoonlijke dagpatroon bekend.
+                Het systeem leert het dagritme en stuurt alleen meldingen bij afwijkingen. Na ongeveer een week is het persoonlijke patroon bekend.
               </p>
               <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4">
                 <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Shield class="w-7 h-7 text-green-600" />
                 </div>
                 <div>
-                  <p class="text-gray-900 font-bold">Alle data blijft lokaal</p>
-                  <p class="text-gray-600">Op de hub in de woning</p>
+                  <p class="text-gray-900 font-bold">Slim en veilig</p>
+                  <p class="text-gray-600">Alleen meldingen, geen sensorbeelden</p>
                 </div>
               </div>
             </div>

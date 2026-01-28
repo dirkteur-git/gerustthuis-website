@@ -79,8 +79,8 @@ const features = [
   },
   {
     icon: Lock,
-    title: '100% privacy',
-    description: 'Alle data lokaal. Geen camera\'s. Jij bepaalt wie toegang heeft.'
+    title: 'Slim en veilig',
+    description: 'Geen camera\'s. Alleen meldingen bij afwijkingen. Jij bepaalt wie toegang heeft.'
   }
 ]
 

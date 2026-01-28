@@ -33,7 +33,7 @@ const locations = [
             <ul class="space-y-2 text-gray-600">
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">•</span>
-                <span><strong>1 hub</strong> — sluit aan op wifi en stroom, analyseert alle data lokaal</span>
+                <span><strong>1 hub</strong> — sluit aan op wifi en stroom, verwerkt data slim en veilig</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">•</span>

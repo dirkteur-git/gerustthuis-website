@@ -90,12 +90,12 @@ const categories = [
         content: 'Nee, en dat is bewust zo. Je kunt alleen zien of alles normaal verloopt of dat er een afwijking is. Je ziet nooit waar je ouder precies is of wat die doet. We melden alleen afwijkingen, geen locaties of activiteiten.'
       },
       {
-        title: 'Waar wordt de data opgeslagen?',
-        content: 'Alle sensordata blijft lokaal op de hub in de woning. Er wordt GEEN data naar de cloud gestuurd. Alleen bij een afwijking wordt een melding (zonder sensordata) naar je telefoon gestuurd.'
+        title: 'Hoe veilig is mijn data?',
+        content: 'Heel veilig. De hub verwerkt sensordata slim en verstuurt alleen meldingen bij afwijkingen. Je ontvangt nooit sensorbeelden of locatiegegevens — alleen een melding dat er iets afwijkt. Alle communicatie is versleuteld.'
       },
       {
         title: 'Wie kan de data zien?',
-        content: 'Niemand. De sensordata verlaat de woning niet. Wij als bedrijf kunnen de data niet zien. Alleen het systeem zelf analyseert lokaal of het dagritme normaal verloopt.'
+        content: 'Alleen jij ontvangt meldingen, en alleen bij afwijkingen. Wij als bedrijf zien geen sensordata en weten niet wat je ouder doet. Het systeem stuurt alleen een signaal als er iets ongewoons is — geen details, geen locaties.'
       },
       {
         title: 'Voelt mijn ouder zich niet bekeken?',
